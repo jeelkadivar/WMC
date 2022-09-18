@@ -1,0 +1,40 @@
+body{
+  background-color: #0a0a3b;
+}
+
+.container{
+  max-width: 450px;
+}
+
+input[type=text],
+input[type=text]:focus{
+  color: #fff;
+  border: none;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+li.list-group-item{
+  background-color: #423a6f;
+  color: #F8F9FA;
+}
+
+.delete{
+  cursor: pointer;
+}
+
+label.add{
+  margin-bottom: 15px;
+}
+
+.filtred{
+  display: none !important;
+}
+
+button{
+  background-color: transparent;
+  border: transparent;
+}
+
+.far{
+  pointer-events: none;
+}

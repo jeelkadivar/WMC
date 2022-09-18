@@ -1,0 +1,109 @@
+<%- include("header") -%>
+
+
+
+<!-- <html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - TODO LIST. BOOTSTRAP + VANILLA.JS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+
+</head>
+<body> -->
+<!-- partial:index.partial.html -->
+<div class="container">
+<!--  HEADER  -->
+  <header class="text-center text-light my-4">
+    <h1 class="mb-4">Todo List</h1>
+    <h2> Date:-<%=date%></h2>
+    <form class="search">
+      <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
+    </form>
+  </header>
+
+<!--  LIST  -->
+  <ul class="list-group todos mx-auto text-light">
+    <% for(var i=0; i < todoitems.length; i++) { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span><%= todoitems[i] %></span>
+        <form action="/delete/<%=date%>/<%= i %>" method="get">
+          <button type="submit" id="button"><i class="far fa-trash-alt delete" onclick="console.log(`yes`)"></i></button>
+        </form>
+      </li>
+    <% } %>
+  </ul>
+
+  
+
+<!--  FORM  -->
+  <form class="add text-center my-4">
+    <label for="add" class="add text-light">Add a new todo:</label>
+    <input type="text" class="form-control xyz m-auto" name="add" id="add">
+  </form>
+
+</div>
+<!-- partial -->
+  <script>
+
+    const addForm = document.querySelector("form.add");
+    const ul = document.querySelector("ul.todos");
+    const searchFormInput = document.querySelector("form.search input");
+    const date = '<%=date%>';
+    
+    //ADD NEW TODO
+    const handleAddItem = (inputValue) => {
+      
+      
+      const i = document.querySelector(".todos").childElementCount;
+      const list = document.querySelector('.xyz').value;
+      fetch(`http://localhost:3000/todoadd/${date}/${list}`, {method: 'post'});
+      const html = `
+       <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>${inputValue}</span>
+          <form action="/delete/${date}/${i}" method="get">
+            <button type="submit"><i class="far fa-trash-alt delete"></i></button>
+          </form>
+        </li>
+      `;
+      ul.innerHTML += html;
+    };
+
+    addForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+       const inputValue = addForm.add.value;
+      if (inputValue.length) handleAddItem(inputValue);
+      addForm.add.value = "";
+    });
+
+    //REMOVE TODO
+    ul.addEventListener("click", async (e) => {
+      if  (e.target.classList.contains("delete")) {
+        e.target.parentElement.parentElement.parentElement.remove();
+      }
+    });
+
+    //SEARCH INPUT: PREVENT DEFAULT ACTION - LITTLE BUG I FOUND IN THE COURSE PROJECT
+    searchFormInput.parentElement.addEventListener("submit", (e) =>
+      e.preventDefault()
+    );
+
+    //SEARCH AND FILTER TODOS
+    const filterItems = (value) => {
+      Array.from(ul.children).forEach((li) => {
+        if (!li.textContent.toLowerCase().includes(value)) li.classList.add("filtred");
+        else li.classList.remove("filtred");
+      });
+    };
+
+    searchFormInput.addEventListener("keyup", (e) => {
+      const value = searchFormInput.value.toLowerCase().trim();
+      filterItems(value);
+    });
+
+  </script>
+
+//</body>
+//</html>
+
+<%- include("footer") -%>

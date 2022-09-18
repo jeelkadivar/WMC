@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - TODO LIST. BOOTSTRAP + VANILLA.JS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+<link rel="stylesheet" href="/todo/style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+
+<!--  HEADER  -->
+  <header class="text-center text-light my-4">
+    <h1 class="mb-4">Todo List</h1>
+    <form class="search">
+      <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
+    </form>
+  </header>
+
+<!--  LIST  -->
+  <ul class="list-group todos mx-auto text-light">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>eat pizza</span>
+      <i class="far fa-trash-alt delete"></i>
+    </li>
+
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>listen to music</span>
+      <i class="far fa-trash-alt delete"></i>
+    </li>
+  </ul>
+
+<!--  FORM  -->
+  <form class="add text-center my-4">
+    <label for="add" class="add text-light">Add a new todo:</label>
+    <input type="text" class="form-control m-auto" name="add" id="add">
+  </form>
+
+</div>
+<!-- partial -->
+  <script  src="/todo/front.js"></script>
+
+</body>
+</html>
