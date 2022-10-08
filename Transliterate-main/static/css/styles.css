@@ -1,0 +1,286 @@
+@media only screen and (max-width: 750px) {
+    #top {
+        display: none;
+    }
+
+    #mobile {
+        background-color: #E5E5E5;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #mobile {
+        display: none;
+    }
+}
+
+.btn-file-choose {
+    width: 60%;
+}
+
+.box-labels {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.C-HEADING {
+    font-size: 4.5em;
+}
+
+.clr {
+    background-color: #f5f5f5;
+}
+
+.card-images {
+    width: "100%";
+    height: 400px
+}
+
+.card-content {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.carousel-heading {
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.c2 {
+    color: black;
+    top: 40px;
+}
+
+.heading1 {
+    position: relative;
+    right: 50%;
+    margin-left: 10%;
+    font-size: 200%;
+}
+
+.heading2 {
+    position: relative;
+    right: 50%;
+    margin-left: 10%;
+}
+
+.c-heading {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.c3 {
+    position: relative;
+    bottom: 260px;
+    right: 50%;
+    margin-left: 10%;
+}
+
+.diagnosis {
+
+    margin-left: 10%;
+}
+
+.description {
+    display: inline-block;
+    color: #1D3549
+}
+
+.forms-model {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img-card {
+    display: block;
+    margin: auto;
+}
+
+.info {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#mid2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.opt1 {
+    color: #f7f7f7;
+}
+
+.prediction {
+    background-color: #fff;
+}
+
+.reset {
+    margin-left: 80%;
+}
+
+.req {
+    font-size: 16px;
+}
+
+.skip-me {
+    display: none;
+}
+
+
+
+.tester {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.unhide {
+    display: block;
+}
+
+
+
+
+
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+/* variables */
+/* html, body, .wrapper {
+  height: 100%;
+} */
+
+/* body {
+  background: url(https://dl.dropboxusercontent.com/s/d4v7klfcq68uv5x/13.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+} */
+
+/* .wrapper {
+  background: rgba(0, 0, 0, 0.7);
+}
+.wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://dl.dropboxusercontent.com/u/5233512/f2DRJ.png);
+} */
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -21px 0 0 -116px;
+}
+
+.button {
+  position: absolute;
+  display: block;
+  width: 230px;
+  height: 42px;
+  color: #add6f8;
+  font-size: 21px;
+  line-height: 200%;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+}
+.button span {
+  position: absolute;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 1;
+}
+.button .border {
+  border: 1px solid #add6f8;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.button .top, .button .bottom, .button .left, .button .right {
+  background-color: #33e0ff;
+  height: 1px;
+  width: 0;
+}
+.button .left, .button .right {
+  height: 0;
+  width: 1px;
+}
+.button .top {
+  top: -5px;
+  left: -15px;
+}
+.button .bottom {
+  bottom: -5px;
+  right: -15px;
+}
+.button .left {
+  top: -15px;
+  right: -5px;
+}
+.button .right {
+  bottom: -15px;
+  left: -5px;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover .border {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+}
+.button:hover .top, .button:hover .bottom {
+  width: 230px;
+}
+.button:hover .left, .button:hover .right {
+  height: 40px;
+}
+.button:hover .top {
+  left: -5px;
+}
+.button:hover .bottom {
+  right: -5px;
+}
+.button:hover .left {
+  top: -5px;
+}
+.button:hover .right {
+  bottom: -5px;
+}
+.button .text {
+  position: relative;
+  letter-spacing: 0.03em;
+}
